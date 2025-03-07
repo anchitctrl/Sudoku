@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/sudoku.png">
+    <script src="script.js" defer></script>
+</head>
+<body> 
+    <div class="mainContainer">
+        <div class="sudoku-main-table">
+            <div class="header">
+                <div style="margin-right: 20px;">
+                    <select onchange="selectDifficulty()" style="padding: 8px;border-radius: 10px;cursor:pointer" id="difficulty">
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+                <div class="game-level">Game Level: <span id="difficultyValue">Easy</span></div>
+            </div>
+            <div class="sudoku-table"></div>
+        </div>
+        <div>
+            <button onclick="generateButtonClick()" id="generate-button" class="generateButton">Generate Sudoku</button>
+        </div>
+    </div>
+</body>
+</html>
