@@ -76,7 +76,7 @@ body{
     }
 
     .cell-input{
-        font-size: 25px;
+        font-size: 25px !important;
     }
 
     .sudoku-table{

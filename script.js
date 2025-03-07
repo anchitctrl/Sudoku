@@ -8,6 +8,24 @@ if(globalDifficulty){
     document.getElementById('difficultyValue').innerHTML = globalDifficulty;
 }
 
+// function startTimer(){
+//     let seconds = 0;
+//     let timerInterval = null;
+//     if (timerInterval === null) {
+//         timerInterval = setInterval(() => {
+//             seconds++;
+//             document.getElementById("timer").innerText = formatTime(seconds);
+//         }, 1000);
+//     }
+// }
+
+// function formatTime(totalSeconds) {
+//     let hrs = Math.floor(totalSeconds / 3600);
+//     let mins = Math.floor((totalSeconds % 3600) / 60);
+//     let secs = totalSeconds % 60;
+//     return `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+// }
+
 window.onload = function(){
     try{
         generateButtonClick();
@@ -39,6 +57,7 @@ function generateSudoku(difficulty) {
     generateSolvedBoard();
     let puzzle = createPuzzle(difficulty);
     displayBoard(puzzle);
+    // startTimer();
     setMouseHover();
 }
 
