@@ -15,6 +15,7 @@
     <script src="script.js" defer></script>
 </head>
 <body> 
+    <!-- background animation -->
     <div class="area">
         <ul class="squares">
             <li></li>
@@ -33,57 +34,32 @@
             <li></li>
         </ul>
     </div>
+    <!-- background animation -->
+
     <div class="mainContainer">
+        <!-- header -->
         <header>
             <div class="header-declaration">SUDOKU</div>
         </header>
+        <!-- header -->
+
         <div class="sudoku-main-table game-child">
             <div class="game-header">
-                <div style="margin-right: 20px;">
-                    <!-- <select onchange="selectDifficulty()" style="padding: 8px;border-radius: 10px;cursor:pointer" id="difficulty">
-                        <option value="Easy">Easy</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Hard">Hard</option>
-                    </select> -->
-                </div>
+                <div style="margin-right: 20px;"></div>
                 <div class="game-level">Level: <span id="difficultyValue">Easy</span></div>
-                <!-- <div id="timer">00:00:00</div> -->
             </div>
             <div class="sudoku-table"></div>
         </div>
+        
         <div class="landing-page-child">
-            <!-- <ul onchange="selectDifficulty()" class="game-level-dropdown" id="difficulty">
-                <li value="Easy">Easy</li>
-                <li value="Medium">Medium</li>
-                <li value="Hard">Hard</li>
-            </ul> -->
             <button onclick="generateButtonClick()" id="generate-button" class="generateButton">Generate Sudoku</button>
-            <!-- <div class="setGameLevel">
-                <div style="width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 2px;" class="decrease"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div class="level-bar"></div>
-                <div style="width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 2px;" class="increase"></div>
-            </div> -->
         </div>
+
+        <!-- footer -->
         <footer>
-            <a class="footer-declaration" href="https://github.com/anchitctrl" target="_blank">Designed and Developed with 
-                <svg style="padding: 0px 3px;" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>    
-            by Anchit</a>
+            <a class="footer-declaration" href="https://github.com/anchitctrl" target="_blank">Designed and Developed with <svg style="padding: 0px 3px;" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>by Anchit</a>
         </footer>
+        <!-- footer -->
     </div>
 </body>
 </html>
