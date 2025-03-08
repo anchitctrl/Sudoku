@@ -43,16 +43,21 @@
         </header>
         <!-- header -->
 
-        <div class="sudoku-main-table game-child">
+        <div style="display: none;" class="sudoku-main-table game-child">
             <div class="game-header">
                 <div style="margin-right: 20px;"></div>
                 <div class="game-level">Level: <span id="difficultyValue">Easy</span></div>
             </div>
             <div class="sudoku-table"></div>
         </div>
-        
+
         <div class="landing-page-child">
-            <button onclick="generateButtonClick()" id="generate-button" class="generateButton">Generate Sudoku</button>
+            <div class="game-mode-list">
+                <div onclick="selectGameMode()" class="game-mode selected-game-mode">Easy</div>
+                <div onclick="selectGameMode()" class="game-mode">Medium</div>
+                <div onclick="selectGameMode()" class="game-mode">Hard</div>
+            </div>
+            <button onclick="generateButtonClick()" id="generate-button" class="generateButton">Start New Game</button>
         </div>
 
         <!-- footer -->

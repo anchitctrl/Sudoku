@@ -8,6 +8,36 @@ if(globalDifficulty){
     document.getElementById('difficultyValue').innerHTML = globalDifficulty;
 }
 
+let gameModes = document.querySelectorAll('.game-mode');
+console.log(gameModes.length);
+gameModes.forEach(gameMode=>{
+// for(let i=0; i<gameModes.length; i++){
+    gameMode.addEventListener('onclick',selectGameModess(gameMode))
+})
+
+function selectGameMode(){
+    console.log('njbhg');
+}
+
+function selectGameModess(gameMode){
+//     try{
+        console.log('Inside selectGameMode');
+        // {
+            console.log('Mode Clicked');
+            console.log(gameMode);
+        // }
+//         // let gameModes = document.querySelectorAll('.game-mode');
+//         // console.log(gameModes.length);
+//         // gameModes.forEach(gameMode=>{
+//         //     console.log(gameMode.innerHTML);
+//         // })
+//         console.log(event.innerHTML);
+//     }catch(error){
+//         console.log('Error in selectGameMode');
+//         console.log(error.message);
+//     }
+}
+
 // function startTimer(){
 //     let seconds = 0;
 //     let timerInterval = null;

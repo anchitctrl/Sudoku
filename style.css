@@ -62,6 +62,37 @@ header{
     width: -webkit-fill-available;
 }
 
+.game-mode-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: inherit;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+.selected-game-mode{
+    background-color: #fca518 !important;
+    border-bottom: 2px solid #eb970a;
+    box-shadow: 0px 0px 1px 2px hsl(37deg 97% 54% / 10%), inset 0px 3px 2px 2px #ffae2b, inset 0px -2px 2px 0px #d78908 !important;
+    border-top: 1px solid #eb970ab0 !important;
+    border-right: 1px solid #eb970ab0 !important;
+    border-left: 1px solid #eb970ab0 !important;
+    color: white !important;
+    /* background-color: rgba(76, 118, 193, 0.85) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(7.3px);
+}
+
+.game-mode{
+    padding: 16px 24px;
+    background-color: #5f80ba30;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.2);
+    /* color: white; */
+    cursor: pointer;
+}
+
 /* .game-child{
     display: none !important;
 } */
@@ -74,14 +105,14 @@ header{
     background: rgba(255, 255, 255, 0.23);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.3px);
+    backdrop-filter: blur(4px);
     position: absolute;
-    height: 70vh;
-    width: 100vw;
-    display: flex
-;
+    height: 60vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .game-level-dropdown{
@@ -116,14 +147,25 @@ header{
 }
 
 .generateButton{
-    padding: 15px 30px;
+    /* padding: 15px 30px;
     border: none;
     border-radius: 10px;
     color: #4c76c1;
     cursor: pointer;
-    width: inherit;
+    margin: 15px 0px;
+    font-size: 20px; */
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
     margin: 15px 0px;
     font-size: 20px;
+    background-color: #4c76c1;
+    border-bottom: 2px solid #385993;
+    box-shadow: 0px 0px 1px 2px rgb(76 118 193 / 20%), inset 0px 3px 0px 2px #527bc3, inset 0px -2px 2px 0px #385993;
+    border-top: 1px solid #3859936b;
+    border-right: 1px solid #3859936b;
+    border-left: 1px solid #3859936b;
 }
 
 .cell-row{
@@ -219,6 +261,10 @@ header{
 .cell-corner-bold-border{
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+}
+
+.area{
+    backdrop-filter: blur(4px);
 }
 
 .squares {
