@@ -263,9 +263,9 @@ header{
     border-bottom: 2px solid black;
 }
 
-.area{
+/* .area{
     backdrop-filter: blur(4px);
-}
+} */
 
 .squares {
     position: absolute;
