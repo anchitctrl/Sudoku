@@ -38,7 +38,7 @@ footer{
 header{
     position: absolute;
     top: 0;
-    padding: 10px;
+    margin: 15px 0px;
     width: 100vw;
     display: flex;
     align-items: center;
