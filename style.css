@@ -72,6 +72,9 @@ header{
 }
 
 .selected-game-mode{
+    padding: 16px 24px;
+    border-radius: 10px;
+    cursor: pointer;
     background-color: #fca518 !important;
     border-bottom: 2px solid #eb970a;
     box-shadow: 0px 0px 1px 2px hsl(37deg 97% 54% / 10%), inset 0px 3px 2px 2px #ffae2b, inset 0px -2px 2px 0px #d78908 !important;
@@ -79,23 +82,20 @@ header{
     border-right: 1px solid #eb970ab0 !important;
     border-left: 1px solid #eb970ab0 !important;
     color: white !important;
-    /* background-color: rgba(76, 118, 193, 0.85) !important;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(7.3px);
 }
 
 .game-mode{
     padding: 16px 24px;
-    background-color: #5f80ba30;
     border-radius: 10px;
-    color: rgba(255, 255, 255, 0.2);
-    /* color: white; */
     cursor: pointer;
+    background-color: #5f80ba30;
+    color: rgba(255, 255, 255, 0.2);
 }
 
-/* .game-child{
-    display: none !important;
-} */
+.game-child{
+    display: none;
+}
 
 .landing-page-child{
     /* display: flex;

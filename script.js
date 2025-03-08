@@ -2,41 +2,54 @@ const gridSize = 9;
 const subGridSize = 3;
 let board = [];
 let globalDifficulty = localStorage.getItem('difficulty') ? localStorage.getItem('difficulty') : 'Easy';
-// const selectTag = document.getElementById('difficulty');
-if(globalDifficulty){
-    // selectTag.value = globalDifficulty;
-    document.getElementById('difficultyValue').innerHTML = globalDifficulty;
+// if(globalDifficulty){
+//     document.getElementById('difficultyValue').innerHTML = globalDifficulty;
+// }
+
+// let gameModes = document.querySelectorAll('.game-mode');
+// console.log(gameModes.length);
+// gameModes.forEach(gameMode=>{
+// // for(let i=0; i<gameModes.length; i++){
+//     gameMode.addEventListener('onclick',selectGameModess(gameMode))
+// })
+
+function selectGameMode(element){
+    let gameModes = document.querySelectorAll('.game-modes');
+    gameModes.forEach(gameMode=>{
+        if(gameMode.classList.contains('selected-game-mode')){
+            gameMode.classList.remove('selected-game-mode');
+        }
+        if(!gameMode.classList.contains('game-mode')){
+            gameMode.classList.add('game-mode');
+        }
+    })
+    if(!element.classList.contains('selected-game-mode')){
+        element.classList.add('selected-game-mode');
+    }
+    if(element.classList.contains('game-mode')){
+        element.classList.remove('game-mode');
+    }
+    globalDifficulty = element.innerHTML;
 }
 
-let gameModes = document.querySelectorAll('.game-mode');
-console.log(gameModes.length);
-gameModes.forEach(gameMode=>{
-// for(let i=0; i<gameModes.length; i++){
-    gameMode.addEventListener('onclick',selectGameModess(gameMode))
-})
-
-function selectGameMode(){
-    console.log('njbhg');
-}
-
-function selectGameModess(gameMode){
-//     try{
-        console.log('Inside selectGameMode');
-        // {
-            console.log('Mode Clicked');
-            console.log(gameMode);
-        // }
-//         // let gameModes = document.querySelectorAll('.game-mode');
-//         // console.log(gameModes.length);
-//         // gameModes.forEach(gameMode=>{
-//         //     console.log(gameMode.innerHTML);
-//         // })
-//         console.log(event.innerHTML);
-//     }catch(error){
-//         console.log('Error in selectGameMode');
-//         console.log(error.message);
-//     }
-}
+// function selectGameModess(gameMode){
+// //     try{
+//         console.log('Inside selectGameMode');
+//         // {
+//             console.log('Mode Clicked');
+//             console.log(gameMode);
+//         // }
+// //         // let gameModes = document.querySelectorAll('.game-mode');
+// //         // console.log(gameModes.length);
+// //         // gameModes.forEach(gameMode=>{
+// //         //     console.log(gameMode.innerHTML);
+// //         // })
+// //         console.log(event.innerHTML);
+// //     }catch(error){
+// //         console.log('Error in selectGameMode');
+// //         console.log(error.message);
+// //     }
+// }
 
 // function startTimer(){
 //     let seconds = 0;
@@ -56,26 +69,32 @@ function selectGameModess(gameMode){
 //     return `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 // }
 
-window.onload = function(){
-    try{
-        generateButtonClick();
-    }catch(error){
-        console.log('Error in window.onload');
-        console.log(error.message);
-    }
-}
+// window.onload = function(){
+//     try{
+//         generateButtonClick();
+//     }catch(error){
+//         console.log('Error in window.onload');
+//         console.log(error.message);
+//     }
+// }
 
 function selectDifficulty(){
     globalDifficulty = document.getElementById('difficulty').value;
     localStorage.setItem('difficulty', globalDifficulty);
-    document.getElementById('difficultyValue').innerHTML = globalDifficulty;
+    // document.getElementById('difficultyValue').innerHTML = globalDifficulty;
 }
 
 function generateButtonClick(){
     try{
+        console.log('Inside generateButtonClick');
         if(board.length > 0){
             sudokuTableElement.innerHTML = '';
         }
+        const sudokuTable = document.querySelector('.main-sudoku');
+        const loadingPage = document.querySelector('.landing-page-child');
+        loadingPage.style.display = 'none';
+        sudokuTable.classList.remove('game-child');
+        sudokuTable.classList.add('sudoku-main-table');
         generateSudoku(globalDifficulty);
     }catch(error){
         console.log('Error in generateButtonClick');
