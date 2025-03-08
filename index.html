@@ -15,6 +15,24 @@
     <script src="script.js" defer></script>
 </head>
 <body> 
+    <div class="area">
+        <ul class="squares">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
     <div class="mainContainer">
         <header>
             <div class="header-declaration">SUDOKU</div>
@@ -33,24 +51,18 @@
             </div>
             <div class="sudoku-table"></div>
         </div>
-        <div style="    display: flex
-;
-    flex-direction: column;
-    align-items: center;
-    width: 80vw;">
-            <select onchange="selectDifficulty()" style="padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    width: inherit;
-    margin: 15px 0px;" id="difficulty">
-                <option value="Easy">Easy</option>
-                <option value="Medium">Medium</option>
-                <option value="Hard">Hard</option>
-            </select>
+        <div class="landing-page-child">
+            <!-- <ul onchange="selectDifficulty()" class="game-level-dropdown" id="difficulty">
+                <li value="Easy">Easy</li>
+                <li value="Medium">Medium</li>
+                <li value="Hard">Hard</li>
+            </ul> -->
             <button onclick="generateButtonClick()" id="generate-button" class="generateButton">Generate Sudoku</button>
         </div>
         <footer>
-            <a class="footer-declaration" href="https://github.com/anchitctrl" target="_blank">Designed and Developed by Anchit</a>
+            <a class="footer-declaration" href="https://github.com/anchitctrl" target="_blank">Designed and Developed with 
+                <svg style="padding: 0px 3px;" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>    
+            by Anchit</a>
         </footer>
     </div>
 </body>
