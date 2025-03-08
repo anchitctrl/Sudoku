@@ -50,7 +50,7 @@ header{
     font-weight: 400;
     font-style: normal;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .game-header{
@@ -62,9 +62,9 @@ header{
     width: -webkit-fill-available;
 }
 
-.game-child{
+/* .game-child{
     display: none !important;
-}
+} */
 
 .landing-page-child{
     display: flex;
@@ -93,7 +93,7 @@ header{
 }
 
 .sudoku-table{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 20px 0px;
 }
 
@@ -125,11 +125,12 @@ header{
     text-align: center;
     padding: 5px;
     font-size: 20px;
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: aliceblue;
 }
 
 @media screen and (min-width: 550px){

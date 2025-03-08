@@ -2,9 +2,9 @@ const gridSize = 9;
 const subGridSize = 3;
 let board = [];
 let globalDifficulty = localStorage.getItem('difficulty') ? localStorage.getItem('difficulty') : 'Easy';
-const selectTag = document.getElementById('difficulty');
+// const selectTag = document.getElementById('difficulty');
 if(globalDifficulty){
-    selectTag.value = globalDifficulty;
+    // selectTag.value = globalDifficulty;
     document.getElementById('difficultyValue').innerHTML = globalDifficulty;
 }
 
